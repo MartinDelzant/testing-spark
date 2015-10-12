@@ -12,21 +12,32 @@ Testing Spark 1.5.1 for personal purposes
 
 ### Cloning
 
-  git clone https://github.com/Tinmard/testing-spark
+`git clone https://github.com/Tinmard/testing-spark`
 
 ### Building the jar
 
 To be able to submit our app with spark-submit, we need to build a fat jar :
 
-  cd testing-spark
-  sbt package
+```
+cd testing-spark
+sbt package
+```
 
-The .jar will be located in the target/scala-2.10/ folder
+The .jar will be located in the `target/scala-2.10/` folder
+
+### Launching
+  
+`$SPARK\_HOME/bin/spark-submit --class "common.<ObjectName>" --master=local[n] testing-spark/scala-2.10/testingspark\_2.10-1.0.jar list_of_args`
+
+## Implemented Functions
+
+### Simple App
+
+Just to test if Spark is working. It counts the number of `a` and `b` in the lines of the `inputFile`
 
 ### WordCount
 
-Launch : 
-  $SPARK\_HOME/bin/spark-submit --class "common.WordCount" --master=local[n] testing-spark/scala-2.10/testingspark\_2.10-1.0.jar inputFile outputDirectory
+Does a word count on the `inputFile` and saves it to the `outputFile`
 
-The output is a directory because the method .saveAsTextFile (on RDD's) is called
+
 
