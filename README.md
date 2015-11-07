@@ -12,7 +12,7 @@ Testing Spark 1.5.1 for personal purposes
 
 ### Cloning
 
-`git clone https://github.com/Tinmard/testing-spark`
+`git clone https://github.com/MartinDelzant/testing-spark`
 
 ### Building the jar
 
